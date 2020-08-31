@@ -1,0 +1,208 @@
+@font-face{
+    font-family: "uefa-bold";
+    src:url("../assets/TTF/UEFASupercup-Bold.ttf");
+}
+@font-face{
+    font-family: "uefa-regular";
+    src:url("../assets/TTF/UEFASupercup-Regular.ttf");
+}
+
+
+#videoBG{
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: auto;
+}
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+
+html{
+    min-height: 100vh;
+    cursor: url("../cards/cursor.png"), auto;
+    
+}
+body{
+    margin: 0;
+}
+
+.page-title{
+    color: white;
+    font-family: "uefa-bold" , sans-serif;
+    font-weight: normal;
+    text-align: center;
+    font-size: 4em;
+}
+
+
+.game-container{
+    display: grid;
+    grid-template-columns: repeat(4 , auto);
+    grid-gap: 10px;
+    margin: 50px;
+    justify-content: center;
+    perspective: 500px;
+    
+}
+
+.game-info-container{
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: space-between;
+
+}
+.game-info{
+    font-family: "uefa-regular",serif;
+    color: white;
+    font-size: 2rem;
+}
+
+.card{
+    
+    height: 175px;
+    width: 125px;
+    position: relative;
+}
+
+.card-face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden;
+    cursor: pointer;
+    backface-visibility: hidden;
+    transition: transform 500ms ease-in-out;
+
+}
+
+
+
+.card.visible .card-back{
+    transform: rotateY(-180deg);
+}
+
+.card.visible .card-front{
+    transform: rotateY(0);
+}
+
+.card.matched{
+
+}
+
+.card-back{
+    /* background-color: black;
+    border-color: #ff6000; */
+}
+
+.card-front{
+    transform: rotateY(180deg);
+}
+
+.bg,.card-value{
+    height: 100%;
+    width: auto;
+}
+
+/* .card-value{
+    height: 100%;
+    width: auto;
+    transform: scale(0.95);
+}
+.card-value:hover{
+    transform: scale(1);
+} */
+
+
+.logo{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    align-self: flex-end;
+    transform:translateY(-20px);
+    transition: transform 100ms ease-in-out;
+}
+
+.card-back:hover .logo{
+    transform: translateY(-50px) scale(1.5) rotate(180deg);
+}
+
+.overlay-text{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: #fff;
+    font-family: "uefa-bold",sans-serif;
+    display: none;
+}
+
+.overlay-text.visible{
+display: flex;
+flex-direction: column;
+animation: overlay-grow 500ms forwards;
+}
+
+.overlay-text-small{
+    font-size: .3em;;
+}
+
+@keyframes overlay-grow{
+    from{
+        background-color: rgba(0,0,0,0);
+        font-size: 0;
+    }
+    to{
+        background-color: rgba(0,0,0,0.8);
+        font-size: 5em;
+    }
+}
+
+
+
+@media (min-aspect-ratio: 16/9){
+    #videoBG{
+        width:100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9){
+    #videoBG{
+        width:auto;
+        height: 100%;
+    }
+    body{
+        cursor: none;
+    }
+}
+
+@media (max-width:767px){
+    #videoBG{
+        display: none;
+    }
+    body{
+        background: url(../cards/bg.png);
+        background-size: cover;
+    }
+    .game-container{
+        grid-template-columns: repeat(2,auto);
+    }
+
+    .game-info-container{
+        flex-direction: column;
+        align-items: center;
+    }
+}

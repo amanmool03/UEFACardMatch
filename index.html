@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , user-scalable = no , maximum-scale =1.0">
+    <title>Match uefa version</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <video id="videoBG" poster="cards/bg.png" autoplay muted loop>
+        <source src="cards/bg.mp4" type="video/mp4">
+    </video>
+
+    <h1 class="page-title">Memory Match</h1>
+
+    <div class="overlay-text visible">
+        Click to Start
+    </div>
+
+    <div id="game-over-text" class="overlay-text ">
+        GAME OVER
+        <span class="overlay-text-small"> Click to restart</span>
+    </div>
+
+    <div id="victory-text" class="overlay-text ">
+        Victory
+        <span class="overlay-text-small"> Click to restart</span>
+    </div>
+
+    <div class="game-container">
+        <div class="game-info-container">
+            <div class="game-info">
+                Time <span id="time-remaining">100</span>
+            </div>
+            <div class="game-info">
+                Flips <span id="flips">0</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="cards/logo.png" class="logo" alt="">
+                <img src="cards/backCard.png" class="bg" alt="">
+            </div>
+            <div class="card-front card-face">
+                <img src="cards/lewandoski.png" class="card-value" alt="">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="cards/logo.png" class="logo" alt="">
+                <img src="cards/backCard.png" class="bg" alt="">
+            </div>
+            <div class="card-front card-face">
+                <img src="cards/lewandoski.png" class="card-value" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="cards/logo.png" class="logo" alt="">
+                <img src="cards/backCard.png" class="bg" alt="">
+            </div>
+            <div class="card-front card-face">
+                <img src="cards/immobile.png" class="card-value" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="cards/logo.png" class="logo" alt="">
+                <img src="cards/backCard.png" class="bg" alt="">
+            </div>
+            <div class="card-front card-face">
+                <img src="cards/immobile.png" class="card-value" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="cards/logo.png" class="logo" alt="">
+                <img src="cards/backCard.png" class="bg" alt="">
+            </div>
+            <div class="card-front card-face">
+                <img src="cards/Messi.png" class="card-value" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="cards/logo.png" class="logo" alt="">
+                <img src="cards/backCard.png" class="bg" alt="">
+            </div>
+            <div class="card-front card-face">
+                <img src="cards/Messi.png" class="card-value" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="cards/logo.png" class="logo" alt="">
+                <img src="cards/backCard.png" class="bg" alt="">
+            </div>
+            <div class="card-front card-face">
+                <img src="cards/oblak.png" class="card-value" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="cards/logo.png" class="logo" alt="">
+                <img src="cards/backCard.png" class="bg" alt="">
+            </div>
+            <div class="card-front card-face">
+                <img src="cards/oblak.png" class="card-value" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="cards/logo.png" class="logo" alt="">
+                <img src="cards/backCard.png" class="bg" alt="">
+            </div>
+            <div class="card-front card-face">
+                <img src="cards/Ronaldo.png" class="card-value" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="cards/logo.png" class="logo" alt="">
+                <img src="cards/backCard.png" class="bg" alt="">
+            </div>
+            <div class="card-front card-face">
+                <img src="cards/Ronaldo.png" class="card-value" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="cards/logo.png" class="logo" alt="">
+                <img src="cards/backCard.png" class="bg" alt="">
+            </div>
+            <div class="card-front card-face">
+                <img src="cards/salah.png" class="card-value" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="cards/logo.png" class="logo" alt="">
+                <img src="cards/backCard.png" class="bg" alt="">
+            </div>
+            <div class="card-front card-face">
+                <img src="cards/salah.png" class="card-value" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="cards/logo.png" class="logo" alt="">
+                <img src="cards/backCard.png" class="bg" alt="">
+            </div>
+            <div class="card-front card-face">
+                <img src="cards/sancho.png" class="card-value" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="cards/logo.png" class="logo" alt="">
+                <img src="cards/backCard.png" class="bg" alt="">
+            </div>
+            <div class="card-front card-face">
+                <img src="cards/sancho.png" class="card-value" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="cards/logo.png" class="logo" alt="">
+                <img src="cards/backCard.png" class="bg" alt="">
+            </div>
+            <div class="card-front card-face">
+                <img src="cards/vandijk.png" class="card-value" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="cards/logo.png" class="logo" alt="">
+                <img src="cards/backCard.png" class="bg" alt="">
+            </div>
+            <div class="card-front card-face">
+                <img src="cards/vandijk.png" class="card-value" alt="">
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <script src="js/app.js" async></script>
+
+</body>
+
+</html>
